@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeanDY's Admin </title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/admin.css">
+
+    <!-- Fonts Fmily -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;500;700&display=swap');
+    </style>
+
+  <!-- Favicon -->
+    <link rel="icon" type="image/icon" href="images/icon.png">
+</head>
+<body>
+    <!-- Navbar -->
+
+    <div class="header text-center p-2 bg-dark d-lg-none">
+        <h3>TeamDY's Admin</h3>
+    </div>
+
+    <nav class="side-menu d-none d-lg-block">
+        <div class="team-name">
+            <h2>TeamDY</h2>
+        </div>
+        <ul>
+            <li>
+                <a href="#dashboard"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer2" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+                </svg> &nbsp;Dashboard</a>
+            </li>
+            <li>
+                <a href="#widges"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                </svg> &nbsp;Widges</a>
+            </li>
+            <li>
+                <a href="#income"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
+                <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
+                </svg> &nbsp;Income</a>
+            </li>
+            <li>
+                <a href="#tables"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0Zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07Z"/>
+                </svg> &nbsp;Tables</a>
+            </li>
+            <li>
+                <a href="#logout"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                </svg> &nbsp;Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+
+        <!-- Dashboard -->
+        <div class="sections" id="dashboard">
+
+            <div class="row col-lg-12 mx-auto">
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                <div class="card">
+                    <div class="card-body">
+                    <div class="icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                    </div>
+                    <div class="counter">
+                        <p class="number m-0">2500</p>
+                        <p class="count-name m-0">Visitor</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="counter">
+                            <p class="number m-0">625.2hrs</p>
+                            <p class="count-name m-0">Total Time Spend</p>
+                        </div>       
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                    <div class="card-body">
+                        <div class="icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                            </svg>
+                        </div>
+                        <div class="counter">
+                            <p class="number m-0">15mins</p>
+                            <p class="count-name m-0">Average Time Spend</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">500</p>
+                                <p class="count-name m-0">Message</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">23.6k</p>
+                                <p class="count-name m-0">Facebook Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">12.3k</p>
+                                <p class="count-name m-0">Instagram Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">10.5k</p>
+                                <p class="count-name m-0">Twitter Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">600</p>
+                                <p class="count-name m-0">Phone Call</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="photo-box m-2"><img src="./images/daung.png" alt="Daung photo" class="admin-photo rounded-circle"></div>
+                            <h4>Mal Sawm Daung Sangi</h4>
+                            <p class="count-name">Sed up a greater skill.</p>
+                            <p class="update-time">16mins ago</p>
+                            <button type="button" class="btn btn-sm mb-2">Update New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="photo-box m-2"><img src="./images/yehtetaung.png" alt="Daung photo" class="admin-photo rounded-circle"></div>
+                            <h4>Ye Htet Aung</h4>
+                            <p class="count-name">Upgrade personal information.</p>
+                            <p class="update-time">30mins ago</p>
+                            <button type="button" class="btn btn-sm mb-2">Update New</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <!-- Widges -->
+        <div class="sections" id="widges">
+
+            <div class="title text-center p-2">
+                <h3>Within Two Weeks</h3>
+            </div>
+
+            <div class="row col-lg-12 mx-auto">
+
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                <div class="card">
+                    <div class="card-body">
+                    <div class="icon mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                        </svg>
+                    </div>
+                    <div class="counter">
+                        <p class="number m-0">45</p>
+                        <p class="count-name m-0">Recent Visitor</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                            </svg>
+                        </div>
+                        <div class="counter">
+                            <p class="number m-0">9.4hrs</p>
+                            <p class="count-name m-0">Total Time Spend</p>
+                        </div>       
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                    <div class="card-body">
+                        <div class="icon mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                            </svg>
+                        </div>
+                        <div class="counter">
+                            <p class="number m-0">12.5mins</p>
+                            <p class="count-name m-0">Average Time Spend</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+                                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">7</p>
+                                <p class="count-name m-0">Recent Message</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">438</p>
+                                <p class="count-name m-0">New Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">107</p>
+                                <p class="count-name m-0">New Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">115</p>
+                                <p class="count-name m-0">New Follower</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="icon mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                                </svg>
+                            </div>
+                            <div class="counter">
+                                <p class="number m-0">18</p>
+                                <p class="count-name m-0">Recent Call</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="photo-box m-2"><img src="./images/daung.png" alt="Daung photo" class="admin-photo rounded-circle"></div>
+                            <h4>Mal Sawm Daung Sangi</h4>
+                            <p class="count-name">One new update.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3 text-center">
+                    <div class="card">
+                        <div class="card-body  p-0">
+                            <div class="photo-box m-2"><img src="./images/yehtetaung.png" alt="Ye Htet Aung photo" class="admin-photo rounded-circle"></div>
+                            <h4>Ye Htet Aung</h4>
+                            <p class="count-name">Two new updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Income -->
+        <div class="sections" id="income">
+
+            <div class="title text-center p-2">
+                <h3>Past Twelve Months Income</h3>
+            </div>
+
+            <div class="row col-lg-12 mx-auto">
+                <div class="col-md-10 mx-auto">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th class="table-active">Years</th>
+                                <th>Months</th>
+                                <th class="table-active">Income</th>
+                                <th>Increase</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table-active">
+                            <td>1</td>
+                            <td">2022</td>
+                            <td>February</td>
+                            <td>350,000Ks</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">2</td>
+                            <td class="table-active">2022</td>
+                            <td>March</td>
+                            <td class="table-active">330,000Ks</td>
+                            <td>-20,000Ks</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td scope="row">3</td>
+                            <td class="table-active">2022</td>
+                            <td>April</td>
+                            <td>350,000Ks</td>
+                            <td>20,000Ks</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">4</td>
+                            <td class="table-active">2022</td>
+                            <td>May</td>
+                            <td class="table-active">350,000Ks</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td scope="row">5</td>
+                            <td class="table-active">2022</td>
+                            <td>June</td>
+                            <td>330,000Ks</td>
+                            <td>-20,000Ks</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">6</td>
+                            <td class="table-active">2022</td>
+                            <td>July</td>
+                            <td class="table-active">330,000Ks</td>
+                            <td></td>
+                        </tr>
+                        <tr class="table-active">
+                            <td scope="row">7</td>
+                            <td class="table-active">2022</td>
+                            <td>August</td>
+                            <td>350,000Ks</td>
+                            <td>20,000Ks</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">8</td>
+                            <td class="table-active">2022</td>
+                            <td>September</td>
+                            <td class="table-active">350,000Ks</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td scope="row">9</td>
+                            <td class="table-active">2022</td>
+                            <td>November</td>
+                            <td>350,000Ks</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">10</td>
+                            <td class="table-active">2022</td>
+                            <td>December</td>
+                            <td class="table-active">360,000Ks</td>
+                            <td>10,000Ks</td>
+                        </tr>
+                        <tr class="table-active">
+                            <td scope="row">11</td>
+                            <td class="table-active">2023</td>
+                            <td>January</td>
+                            <td>350,000Ks</td>
+                            <td>-10,000Ks</td>
+                        </tr>
+                        <tr>
+                            <td scope="row">12</td>
+                            <td class="table-active">2023</td>
+                            <td>February-Now</td>
+                            <td class="table-active">300,000Ks</td>
+                            <td>-50,000Ks</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+         
+        <!-- Tables -->
+        <div class="sections" id="tables">
+
+            <div class="row col-lg-12 mx-auto pt-2">
+
+                <div class="col-md-8 mx-auto mb-3 text-center">
+
+                    <div class="title text-center">
+                        <h4>Yearly Whole Incomes</h4>
+                    </div>
+
+                    <table class="table table-dark table-borderless">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Years</th>
+                                <th>Income</th>
+                                <th>Increase</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2018</td>
+                                <td>2M Ks</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2019</td>
+                                <td>2.4M Ks</td>
+                                <td>40,000Ks</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2020</td>
+                                <td>2.5M Ks</td>
+                                <td>100,000Ks</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2021</td>
+                                <td>2.9M Ks</td>
+                                <td>400,000Ks</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2022</td>
+                                <td>3.8M Ks</td>
+                                <td>700,000Ks</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>2023</td>
+                                <td>750,000Ks</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-md-8 mx-auto mb-3 text-center">
+
+                    <div class="title text-center">
+                        <h4>Social Follower Improvements</h4>
+                    </div>
+
+                    <table class="table table-dark table-borderless">
+                        <thead>
+                            <tr>
+                                <th>Social</th>
+                                <th>2021</th>
+                                <th>2022</th>
+                                <th>2023</th>
+                                <th>Increase Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Facebook</td>
+                                <td>12k</td>
+                                <td>21.4k</td>
+                                <td>23.6k</td>
+                                <td>13%</td>
+                            </tr>
+                            <tr>
+                                <td>Instagram</td>
+                                <td>7k</td>
+                                <td>10.6k</td>
+                                <td>12.3k</td>
+                                <td>10%</td>
+                            </tr>
+                            <tr>
+                                <td>Twitter</td>
+                                <td>6.2k</td>
+                                <td>19.6k</td>
+                                <td>10.5k</td>
+                                <td>9.2%</td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>1200</td>
+                                <td>2100</td>
+                                <td>2500</td>
+                                <td>7.5%%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+        <div class="d-grid gap-2 d-lg-none">
+            <button class="btn btn-sm logout" type="button">Log Out</button>
+          </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

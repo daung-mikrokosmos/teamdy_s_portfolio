@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2a2a2a;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    min-height: 100vh;
+    
+}
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.side-menu {
+    position: fixed;
+    background-color: #000;
+    width: 15%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-menu .team-name {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2a2a2a;
+    color: #f7884d;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.side-menu li {
+    padding: 10px 0;
+    color: #fff;
+}
+
+.side-menu a {
+    color: #fff;
+}
+
+.side-menu a:hover {
+    color: #f7884d;
+}
+
+/* Wrapper */
+
+.header {
+    color: #f7884d;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #000;
+    z-index: 100;
+}
+
+.updates {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #000;
+}
+.update-time {
+    font-family: 'Sofia Sans', sans-serif;
+}
+.title {
+    color: #fdd2c1;
+}
+/* Dashboard */
+#dashboard {
+    padding: 20px 0;
+}
+
+#dashboard .card {
+    background-color: #000;
+}
+
+.card .card-body {
+    color: #fff;
+}
+
+#dashboard .icon {
+    color: #f7884d;
+}
+
+#dashboard .count-name {
+    color: #fdd2c1;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+#dashboard .btn {
+    color: #000;
+    background-color: #f7884d;
+}
+
+#dashboard .admin-photo {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #f7884d;
+}
+
+/* Widges */
+
+#widges .card {
+    background-color: #000;
+}
+
+#widges .icon, .count-name {
+    color: #fdd2c1;
+}
+
+#widges .number {
+    color: #f7884d;
+}
+
+#widges .admin-photo {
+    height: 100px;
+    width: 100px;
+    border: 2px solid #fdd2c1;
+}
+
+/* Income */
+th {
+    color: #f7884d;
+}
+tr {
+    color: #fdd2c1;
+}
+
+/* Log out */
+.logout {
+    background-color: #f7884d;
+    color: #000;
+}
+
+@media (min-width:992px) {
+    .wrapper {
+        padding-left: 15%;
+    }
+    .wrapper .bi {
+        width: 50px;
+        height: 50px;
+    }
+    .sections {
+        border-bottom: 2px solid rgb(0,0,0, 0.2);
+    }
+}
+
+@media (max-width:991px) {
+    *{
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 376px) {
+    #dashboard .bi {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 376px) {
+    #dashboard .bi {
+        width: 25px;
+        height: 25px;
+    }
+}
