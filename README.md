@@ -1,2 +1,3 @@
 # TeamDY-s-Portfolio
-This is a portfolio project by TeamDY of Simbolo's Web Development Introduction Bath1
+This is a portfolio project by TeamDY of Simbolo's Web Development Introduction Bath1.
+The tum are all faked.
